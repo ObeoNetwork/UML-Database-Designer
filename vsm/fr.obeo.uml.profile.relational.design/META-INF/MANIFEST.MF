@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.obeo.uml.profile.relational.design
+Bundle-SymbolicName: fr.obeo.uml.profile.relational.design;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: fr.obeo.uml.profile.relational.design.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.sirius,
+ org.eclipse.sirius.common.acceleo.mtl,
+ org.eclipse.uml2.uml
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: fr.obeo.uml.profile.relational.design,
+ fr.obeo.uml.profile.relational.design.services

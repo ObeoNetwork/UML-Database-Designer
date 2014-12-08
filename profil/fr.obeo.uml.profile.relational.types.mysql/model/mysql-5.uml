@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_wawy8DKDEeS_TI--ubwTeQ" name="RelationalTypes-MySQL-5">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_zFkMUDKDEeS_TI--ubwTeQ" name="bigint">
+    <generalization xmi:id="_YCVaEDKEEeS_TI--ubwTeQ">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_kQhwEDKWEeSJv9ASQ2iHtA" name="binary">
+    <generalization xmi:id="_kQiXIDKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_kcoSYDKWEeSJv9ASQ2iHtA" name="bit">
+    <generalization xmi:id="_kcoSYTKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_kjz4cDKWEeSJv9ASQ2iHtA" name="blob">
+    <generalization xmi:id="_kjz4cTKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_n-xjcDKWEeSJv9ASQ2iHtA" name="bool">
+    <generalization xmi:id="_UEBPwDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_n-yKgDKWEeSJv9ASQ2iHtA" name="boolean">
+    <generalization xmi:id="_UfttQDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_n-yKgjKWEeSJv9ASQ2iHtA" name="char">
+    <generalization xmi:id="_n-yKgzKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_n-yKhDKWEeSJv9ASQ2iHtA" name="char binary">
+    <generalization xmi:id="_n-yKhTKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_oj4boDKWEeSJv9ASQ2iHtA" name="date">
+    <generalization xmi:id="_WiL7UDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_oj4bojKWEeSJv9ASQ2iHtA" name="datetime">
+    <generalization xmi:id="_XkBLwDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_oj4bpDKWEeSJv9ASQ2iHtA" name="dec">
+    <generalization xmi:id="_oj4bpTKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YfGVIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_oj4bpjKWEeSJv9ASQ2iHtA" name="decimal">
+    <generalization xmi:id="_aS4lwDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YfGVIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_oj4bqDKWEeSJv9ASQ2iHtA" name="double">
+    <generalization xmi:id="_apd5wDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YfGVIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_oj4bqjKWEeSJv9ASQ2iHtA" name="double precision">
+    <generalization xmi:id="_a2u5sDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YfGVIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_oj4brDKWEeSJv9ASQ2iHtA" name="fixed">
+    <generalization xmi:id="_dLNdwDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YfGVIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_oj4brjKWEeSJv9ASQ2iHtA" name="float">
+    <generalization xmi:id="_dSETsDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YfGVIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCK6IDKWEeSJv9ASQ2iHtA" name="int">
+    <generalization xmi:id="_pCK6ITKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCK6IjKWEeSJv9ASQ2iHtA" name="integer">
+    <generalization xmi:id="_pCK6IzKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCK6JDKWEeSJv9ASQ2iHtA" name="longblob">
+    <generalization xmi:id="_fV-sMDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCLhMDKWEeSJv9ASQ2iHtA" name="longtext">
+    <generalization xmi:id="_ffJPQDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCLhMjKWEeSJv9ASQ2iHtA" name="mediumblob">
+    <generalization xmi:id="_jEtnwDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCLhNDKWEeSJv9ASQ2iHtA" name="mediumint">
+    <generalization xmi:id="_pCLhNTKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCLhNjKWEeSJv9ASQ2iHtA" name="mediumtext">
+    <generalization xmi:id="_kWHlQDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCLhODKWEeSJv9ASQ2iHtA" name="numeric">
+    <generalization xmi:id="_k9LlQDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YfGVIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCLhOjKWEeSJv9ASQ2iHtA" name="real">
+    <generalization xmi:id="_mGCDsDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YfGVIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCMIQDKWEeSJv9ASQ2iHtA" name="set">
+    <generalization xmi:id="_pCMIQTKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCMIQjKWEeSJv9ASQ2iHtA" name="smallint">
+    <generalization xmi:id="_pCMIQzKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCMIRDKWEeSJv9ASQ2iHtA" name="text">
+    <generalization xmi:id="_nymTMDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCMIRjKWEeSJv9ASQ2iHtA" name="time">
+    <generalization xmi:id="_pSCssDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCMISDKWEeSJv9ASQ2iHtA" name="timestamp">
+    <generalization xmi:id="_pCMISTKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCMISjKWEeSJv9ASQ2iHtA" name="tinyblob">
+    <generalization xmi:id="_qH-2MDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pCMvUDKWEeSJv9ASQ2iHtA" name="tinyint">
+    <generalization xmi:id="_pCMvUTKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_qSujEDKWEeSJv9ASQ2iHtA" name="tinytext">
+    <generalization xmi:id="_sAOxQDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_qSujEjKWEeSJv9ASQ2iHtA" name="varbinary">
+    <generalization xmi:id="_qSujEzKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_qSujFDKWEeSJv9ASQ2iHtA" name="varchar">
+    <generalization xmi:id="_qSujFTKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_qSujFjKWEeSJv9ASQ2iHtA" name="varchar binary">
+    <generalization xmi:id="_qSujFzKWEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_YUavIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_qSujGDKWEeSJv9ASQ2iHtA" name="year(2)">
+    <generalization xmi:id="_tev9sDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_qSujGjKWEeSJv9ASQ2iHtA" name="year(4)">
+    <generalization xmi:id="_t0K0EDKXEeSJv9ASQ2iHtA">
+      <general xmi:type="uml:PrimitiveType" href="pathmap://RelationalTypes/Common#_VphPIDKxEeSulOQzb5EvYQ"/>
+    </generalization>
+  </packagedElement>
+</uml:Model>

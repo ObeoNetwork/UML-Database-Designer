@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/fr.obeo.uml.profile.relational.design.feature_1.0.0.201409231502.jar" id="fr.obeo.uml.profile.relational.design.feature" version="1.0.0.201409231502">
+      <category name="fr.obeo.uml.profile.relational"/>
+   </feature>
+   <feature url="features/fr.obeo.uml.profile.relational.feature_1.0.0.201409231502.jar" id="fr.obeo.uml.profile.relational.feature" version="1.0.0.201409231502">
+      <category name="fr.obeo.uml.profile.relational"/>
+   </feature>
+   <feature url="features/org.obeonetwork.demo.relational.example.feature_1.0.0.201409231319.jar" id="org.obeonetwork.demo.relational.example.feature" version="1.0.0.201409231319">
+      <category name="fr.obeo.uml.profile.relational"/>
+   </feature>
+   <feature url="features/fr.obeo.uml.profile.relational.gen.sql.feature_1.0.0.201409231621.jar" id="fr.obeo.uml.profile.relational.gen.sql.feature" version="1.0.0.201409231621">
+      <category name="fr.obeo.uml.profile.relational"/>
+   </feature>
+   <category-def name="fr.obeo.uml.profile.relational" label="Relational UML Profile"/>
+</site>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_OKxloDKxEeSulOQzb5EvYQ" name="RelationalTypes-Common">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_UZgYwDKxEeSulOQzb5EvYQ" name="DBType"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_VphPIDKxEeSulOQzb5EvYQ" name="DBSimpleType">
+    <generalization xmi:id="_XSRVoDKxEeSulOQzb5EvYQ" general="_UZgYwDKxEeSulOQzb5EvYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_YUavIDKxEeSulOQzb5EvYQ" name="DBTypeWithLength">
+    <generalization xmi:id="_YUavITKxEeSulOQzb5EvYQ" general="_UZgYwDKxEeSulOQzb5EvYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_YfGVIDKxEeSulOQzb5EvYQ" name="DBTypeWithPrecisionAndScale">
+    <generalization xmi:id="_YfGVITKxEeSulOQzb5EvYQ" general="_UZgYwDKxEeSulOQzb5EvYQ"/>
+  </packagedElement>
+</uml:Model>

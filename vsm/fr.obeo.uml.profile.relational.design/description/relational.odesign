@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="relational" version="8.1.0">
+  <ownedViewpoints name="Relational" modelFileExtension="*.uml">
+    <validationSet>
+      <ownedRules xsi:type="validation:SemanticValidationRule" level="ERROR" message="['The table &quot;' + name  + '&quot; has a PK but no PK columns'/]" targetClass="uml.Class">
+        <audits auditExpression="service:validatePKAndPKColumns()"/>
+        <fixes name="Select columns to be referenced by PK">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="service:selectPKColumns()"/>
+          </initialOperation>
+        </fixes>
+        <fixes name="Delete PK">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="service:getPrimaryKey()">
+              <subModelOperations xsi:type="tool:RemoveElement"/>
+            </firstModelOperations>
+          </initialOperation>
+        </fixes>
+      </ownedRules>
+    </validationSet>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Reused Description" domainClass="uml.Package" preconditionExpression="false">
+      <metamodel href="http://www.eclipse.org/uml2/5.0.0/UML#/"/>
+      <defaultLayer name="Default">
+        <toolSections name="Reused Tools">
+          <ownedTools xsi:type="tool_1:DirectEditLabel" name="EDT_DBElement">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="service:editRelationalElementLabel(arg0)"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Schema Diagram" titleExpression="[name + ' - Schema Diagram'/]" initialisation="true" domainClass="uml.Package" preconditionExpression="service:isSchema()">
+      <metamodel href="http://www.eclipse.org/uml2/5.0.0/UML#/"/>
+      <defaultLayer name="Default">
+        <edgeMappings name="DB_ForeignKey" labelDirectEdit="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Reused%20Description']/@defaultLayer/@toolSections.0/@ownedTools[name='EDT_DBElement']" semanticCandidatesExpression="service:getAllForeignKeys()" semanticElements="[self->asSequence()->addAll(oclAsType(Class).getStereotypeApplications())/]" sourceMapping="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Schema%20Diagram']/@defaultLayer/@containerMappings[name='DB_Table']" targetMapping="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Schema%20Diagram']/@defaultLayer/@containerMappings[name='DB_Table']" targetFinderExpression="service:getTargetTableForFK()" sourceFinderExpression="feature:owner" domainClass="uml.Class" useDomainElement="true">
+          <style sizeComputationExpression="1">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="feature:name">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="DB_Table" labelDirectEdit="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Reused%20Description']/@defaultLayer/@toolSections.0/@ownedTools[name='EDT_DBElement']" semanticCandidatesExpression="service:getTables()" semanticElements="[self->asSequence()->addAll(oclAsType(Class).getStereotypeApplications())/]" domainClass="uml.Class" childrenPresentation="List">
+          <subNodeMappings name="DB_Column" labelDirectEdit="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Reused%20Description']/@defaultLayer/@toolSections.0/@ownedTools[name='EDT_DBElement']" semanticCandidatesExpression="service:getColumns()" semanticElements="[self->asSequence()->addAll(oclAsType(Property).getStereotypeApplications())/]" domainClass="uml.Property">
+            <style xsi:type="style:SquareDescription" labelExpression="service:getRelationalElementLabel()" iconPath="/fr.obeo.uml.profile.relational.design/icons/Column.gif" labelAlignment="LEFT">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="DB_PrimaryKey" labelDirectEdit="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Reused%20Description']/@defaultLayer/@toolSections.0/@ownedTools[name='EDT_DBElement']" semanticCandidatesExpression="service:getPrimaryKey()" semanticElements="[self->asSequence()->addAll(oclAsType(Constraint).getStereotypeApplications())/]" domainClass="uml.Constraint">
+            <style xsi:type="style:SquareDescription" labelExpression="service:getRelationalElementLabel()" iconPath="/fr.obeo.uml.profile.relational.design/icons/PrimaryKey.gif" labelAlignment="LEFT">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="DB_Index" labelDirectEdit="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Reused%20Description']/@defaultLayer/@toolSections.0/@ownedTools[name='EDT_DBElement']" semanticCandidatesExpression="service:getIndices()" semanticElements="[self->asSequence()->addAll(oclAsType(Class).getStereotypeApplications())/]" domainClass="uml.Class">
+            <style xsi:type="style:SquareDescription" labelExpression="service:getRelationalElementLabel()" iconPath="/fr.obeo.uml.profile.relational.design/icons/Index.gif" labelAlignment="LEFT">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" iconPath="/fr.obeo.uml.profile.relational.design/icons/Table.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Relational">
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="CRE_Table" label="Table" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Schema%20Diagram']/@defaultLayer/@containerMappings[name='DB_Table']" iconPath="/fr.obeo.uml.profile.relational.design/icons/Table.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="service:container.createTable()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="CRE_Column" label="Column" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Schema%20Diagram']/@defaultLayer/@containerMappings[name='DB_Table']/@subNodeMappings[name='DB_Column']" iconPath="/fr.obeo.uml.profile.relational.design/icons/Column.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="service:container.createColumn()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="CRE_PKColumn" label="PK Column" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Schema%20Diagram']/@defaultLayer/@containerMappings[name='DB_Table']/@subNodeMappings[name='DB_Column']" iconPath="/fr.obeo.uml.profile.relational.design/icons/ColumnAndPrimaryKey.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="service:container.createPKColumn()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="CRE_PrimaryKey" label="Primary Key" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Schema%20Diagram']/@defaultLayer/@containerMappings[name='DB_Table']/@subNodeMappings[name='DB_PrimaryKey']" iconPath="/fr.obeo.uml.profile.relational.design/icons/PrimaryKey.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="service:container.createPrimaryKey()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="CRE_ForeignKey" label="Foreign Key" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Schema%20Diagram']/@defaultLayer/@edgeMappings[name='DB_ForeignKey']" iconPath="/fr.obeo.uml.profile.relational.design/icons/ForeignKey.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="service:source.createForeignKey(target)"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="CRE_Index" label="Index" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Schema%20Diagram']/@defaultLayer/@containerMappings[name='DB_Table']/@subNodeMappings[name='DB_Index']" iconPath="/fr.obeo.uml.profile.relational.design/icons/Index.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="service:container.createIndex()"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="service:isInPKAndNotInFK()">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Schema%20Diagram']/@defaultLayer/@containerMappings[name='DB_Table']/@subNodeMappings[name='DB_Column']/@style" attributeName="iconPath" value="/fr.obeo.uml.profile.relational.design/icons/ColumnAndPrimaryKey.gif"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="service:isNotInPKAndInFK()">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Schema%20Diagram']/@defaultLayer/@containerMappings[name='DB_Table']/@subNodeMappings[name='DB_Column']/@style" attributeName="iconPath" value="/fr.obeo.uml.profile.relational.design/icons/ColumnAndForeignKey.gif"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="service:isInPKAndInFK()">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Schema%20Diagram']/@defaultLayer/@containerMappings[name='DB_Table']/@subNodeMappings[name='DB_Column']/@style" attributeName="iconPath" value="/fr.obeo.uml.profile.relational.design/icons/ColumnAndPrimaryAndForeignKey.gif"/>
+          </vsmElementCustomizations>
+        </customization>
+      </defaultLayer>
+      <additionalLayers name="Views">
+        <containerMappings name="DB_View" labelDirectEdit="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Reused%20Description']/@defaultLayer/@toolSections.0/@ownedTools[name='EDT_DBElement']" semanticCandidatesExpression="service:getViews()" semanticElements="[self->asSequence()->addAll(oclAsType(Class).getStereotypeApplications())/]" domainClass="uml.Class" childrenPresentation="List">
+          <subNodeMappings name="DB_ViewQuery" labelDirectEdit="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Schema%20Diagram']/@additionalLayers[name='Views']/@toolSections.0/@ownedTools[name='EDT_ViewQuery']" semanticCandidatesExpression="var:self" domainClass="uml.Class">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="service:getViewQuery()" labelAlignment="LEFT" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" iconPath="/fr.obeo.uml.profile.relational.design/icons/View.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Views">
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="CRE_View" label="View" forceRefresh="true" containerMappings="//@ownedViewpoints[name='Relational']/@ownedRepresentations[name='Schema%20Diagram']/@additionalLayers[name='Views']/@containerMappings[name='DB_View']" iconPath="/fr.obeo.uml.profile.relational.design/icons/View.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="service:container.createView()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:DirectEditLabel" name="EDT_ViewQuery" forceRefresh="true">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="service:editViewQuery(arg0)"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="Schema Table" titleExpression="[name + ' - Schema Table'/]" preconditionExpression="service:isSchema()" domainClass="uml.Package">
+      <ownedLineMappings name="STA_Table" domainClass="uml.Class" semanticCandidatesExpression="service:getTables()" headerLabelExpression="service:getRelationalElementLabel()">
+        <ownedSubLines name="STA_Column" domainClass="uml.Property" semanticCandidatesExpression="service:getColumns()" headerLabelExpression="feature:name"/>
+      </ownedLineMappings>
+      <ownedColumnMappings name="STA_Type" headerLabelExpression="Type" featureName="name" labelExpression="service:getColumnTypeLabel()"/>
+      <ownedColumnMappings name="STA_PK" headerLabelExpression="PK" featureName="name" labelExpression="[if (self.oclIsKindOf(Property) and self.oclAsType(Property).isInPK()) then 'X' else '' endif/]"/>
+      <ownedColumnMappings name="STA_FK" headerLabelExpression="FK" featureName="name" labelExpression="[if (self.oclIsKindOf(Property) and self.oclAsType(Property).isInFK()) then 'X' else '' endif/]"/>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="fr.obeo.uml.profile.relational.design.services.RelationalServices"/>
+    <ownedJavaExtensions qualifiedClassName="fr.obeo.uml.profile.relational.design.services.RelationalEditLabelServices"/>
+    <ownedJavaExtensions qualifiedClassName="fr.obeo.uml.profile.relational.design.services.RelationalLabelServices"/>
+    <ownedJavaExtensions qualifiedClassName="fr.obeo.uml.profile.relational.design.services.RelationalCreationServices"/>
+  </ownedViewpoints>
+</description:Group>

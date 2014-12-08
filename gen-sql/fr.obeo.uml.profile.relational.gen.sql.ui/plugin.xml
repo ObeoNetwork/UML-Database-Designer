@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IFile"
+            nameFilter="*.uml"
+            id="fr.obeo.uml.profile.relational.gen.sql.ui.popupMenus.contribution.IFile">
+         <menu id="org.eclipse.acceleo.module.menu" label="Relational" path="additionsAcceleo">
+               <groupMarker name="acceleo"/> 
+         </menu>
+         <action
+               class="fr.obeo.uml.profile.relational.gen.sql.ui.popupMenus.AcceleoGenerateSQLScriptsAction"
+               enablesFor="+"
+               id="fr.obeo.uml.profile.relational.gen.sql.ui.popupMenus.acceleoGenerateSQLScriptsAction"
+               icon="icons/default.gif"
+               label="Generate SQL Scripts"
+               menubarPath="org.eclipse.acceleo.module.menu/acceleo"/>
+      </objectContribution>
+   </extension>
+</plugin>
